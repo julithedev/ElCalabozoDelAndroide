@@ -1,3 +1,10 @@
-<h1>juli</h1>
-<h2>Juca</h2>
-
+<div class="app-container">
+    <h1>{{ title }}</h1>
+    <nav>
+      <a routerLink="/">Inicio</a> |
+      <a routerLink="/cart">Carrito</a>
+    </nav>
+    <hr>
+    <!-- Aquí se cargarán los componentes según la ruta -->
+    <router-outlet></router-outlet>
+</div>
