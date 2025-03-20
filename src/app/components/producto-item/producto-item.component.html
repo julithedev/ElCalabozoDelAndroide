@@ -1,6 +1,7 @@
-<div class="producto">
-  <strong>{{ producto.nombre }}</strong> - ${{
-    producto.precio | currency: "USD" : false
-  }}
-  <button (click)="agregar()">Agregar al carrito</button>
+<div class="producto-card">
+  <p class="producto-nombre">{{ producto.nombre }}</p>
+  <p class="producto-precio">
+    ${{ producto.precio | currency: "USD" : false }}
+  </p>
+  <button class="btn-agregar" (click)="agregar()">Agregar al carrito</button>
 </div>

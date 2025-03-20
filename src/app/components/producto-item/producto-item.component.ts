@@ -7,10 +7,16 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrl: './producto-item.component.css',
 })
 export class ProductoItemComponent {
-  @Input() producto: any;
-  @Output() agregarAlCarrito = new EventEmitter<any>();
+  @Input() producto!: { nombre: string; precio: number; disponible: boolean };
+  @Output() agregarAlCarrito = new EventEmitter<{
+    nombre: string;
+    precio: number;
+  }>();
 
   agregar() {
-    this.agregarAlCarrito.emit(this.producto);
+    this.agregarAlCarrito.emit({
+      nombre: this.producto.nombre,
+      precio: this.producto.precio,
+    });
   }
 }

@@ -17,7 +17,7 @@ export class ProductosComponent {
   carrito: { nombre: string; precio: number }[] = [];
 
   agregarAlCarrito(producto: { nombre: string; precio: number }) {
-    console.log('Producto agregado:', producto);
-    alert(`¡${producto.nombre} agregado al carrito!`);
+    this.carrito.push(producto);
+    console.log('Carrito', this.carrito);
   }
 }

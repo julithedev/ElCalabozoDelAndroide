@@ -1,12 +1,15 @@
 <h2>Lista de Productos</h2>
+<div class="contenedor-productos">
+  <app-producto-item
+    *ngFor="let producto of productos"
+    [producto]="producto"
+    (agregarAlCarrito)="agregarAlCarrito($event)"
+  ></app-producto-item>
+</div>
 
-<app-producto-item
-  *ngFor="let producto of productos"
-  [producto]="producto"
-  (agregarAlCarrito)="agregarAlCarrito($event)"
-></app-producto-item>
-
-<h2>Carrito de compras</h2>
-<ul>
-  <li *ngFor="let item of carrito">{{ item.nombre }} - {{ item.precio }}</li>
-</ul>
+<div class="carrito">
+  <h2>Carrito de compras</h2>
+  <ul>
+    <li *ngFor="let item of carrito">{{ item.nombre }} - {{ item.precio }}</li>
+  </ul>
+</div>
