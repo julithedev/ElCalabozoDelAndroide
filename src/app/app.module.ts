@@ -13,9 +13,10 @@ import { HomeComponent } from './components/home/home.component';
 import { ProductosComponent } from './components/productos/productos.component';
 import { ProductoItemComponent } from './components/producto-item/producto-item.component';
 import { ProductoDetalleComponent } from './components/producto-detalle/producto-detalle.component';
+import { PrecioPipe } from './pipes/precio.pipe';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, ProductosComponent, ProductoItemComponent, ProductoDetalleComponent],
+  declarations: [AppComponent, HomeComponent, ProductosComponent, ProductoItemComponent, ProductoDetalleComponent, PrecioPipe],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [provideClientHydration(withEventReplay())],
   bootstrap: [AppComponent],

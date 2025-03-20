@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -7,7 +7,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './producto-detalle.component.html',
   styleUrl: './producto-detalle.component.css',
 })
-export class ProductoDetalleComponent {
+export class ProductoDetalleComponent implements OnInit {
   nombreProducto: string = '';
 
   constructor(private route: ActivatedRoute) {}

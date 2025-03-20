@@ -14,7 +14,10 @@ export class ProductosComponent {
     { nombre: 'SSD NVMe 1TB', precio: 120, disponible: true },
   ];
 
-  verDetalle(producto: { nombre: string; precio: number }) {
-    alert(`Has seleccionado: ${producto.nombre} - $${producto.precio}`);
+  carrito: { nombre: string; precio: number }[] = [];
+
+  agregarAlCarrito(producto: { nombre: string; precio: number }) {
+    console.log('Producto agregado:', producto);
+    alert(`¡${producto.nombre} agregado al carrito!`);
   }
 }
