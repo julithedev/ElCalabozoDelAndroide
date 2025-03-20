@@ -1,0 +1,7 @@
+<div class="producto">
+  <strong>{{ producto.nombre }}</strong> - ${{ producto.precio }}
+  <span *ngIf="producto.disponible; else agotado">Disponible</span>
+  <ng-template #agotado><span style="color: red">Agotado</span></ng-template>
+  <br />
+  <a [routerLink]="['/producto', producto.nombre]">ver detalle</a>
+</div>
